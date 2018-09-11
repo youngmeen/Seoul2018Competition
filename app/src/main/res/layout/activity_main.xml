@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="6"
+    tools:context=".MainActivity">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/closbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/main123"
+            android:onClick="f1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:weightSum="4"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/pharmacy_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="f1"
+                    android:padding="0sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/main_pharmacy" />
+
+                <ImageButton
+                    android:id="@+id/message_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="0sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/main_message"
+                    android:onClick="f3"/>
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/shelter_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="0sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/main_shelter"
+                    android:onClick="f2"/>
+
+                <ImageButton
+                    android:id="@+id/setting_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="0sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/main_setting"
+                    android:onClick="f4"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:weightSum="3"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+                >
+                <ImageButton
+                    android:id="@+id/emergency_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="0sp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/main_emergency"
+                    android:onClick="f5"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                >
+                <ImageButton
+                    android:id="@+id/emergencn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="0sp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/logo"
+                    android:onClick="f5"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
