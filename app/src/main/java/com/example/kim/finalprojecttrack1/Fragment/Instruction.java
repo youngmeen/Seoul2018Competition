@@ -24,10 +24,12 @@ public class Instruction extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instruction);
 
-        lstImages.add(R.drawable.arrow);
-        lstImages.add(R.drawable.arrow);
-        lstImages.add(R.drawable.arrow);
+        lstImages.add(R.drawable.rr11);/*1*/
+        lstImages.add(R.drawable.tt22);/*2*/
 
+        lstImages.add(R.drawable.rrrr1);/*3*//*리스트 다시 해야함*/
+
+        lstImages.add(R.drawable.ff1111);/*4*/
         ViewPagerAdapter viewPagerAdapter=new ViewPagerAdapter(lstImages,this);
         ViewPager viewPager=(ViewPager)findViewById(R.id.viewPager);
         viewPager.setAdapter(viewPagerAdapter);

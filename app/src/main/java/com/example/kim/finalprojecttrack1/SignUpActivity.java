@@ -37,10 +37,14 @@ public class SignUpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
 
 
+
+
+
         email = (EditText) findViewById(R.id.signupActivity_edittext_id);
         name = (EditText) findViewById(R.id.signupActivity_edittext_name);
         password = (EditText) findViewById(R.id.signupActivity_edittext_password);
         signup = (Button) findViewById(R.id.signupActivity_button_signup);
+
 
 
         signup.setOnClickListener(view -> {
@@ -61,20 +65,20 @@ public class SignUpActivity extends AppCompatActivity {
                             UserProfileChangeRequest userProfileChangeRequest = new UserProfileChangeRequest.Builder().setDisplayName(name.getText().toString()).build();
                             task.getResult().getUser().updateProfile(userProfileChangeRequest);
                             userModel.uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
-                            FirebaseDatabase.getInstance().getReference().child("users").child(uid).setValue(userModel).addOnSuccessListener(aVoid -> startActivity(new Intent(SignUpActivity.this, LoginActivity.class)));
-                        });
+                            FirebaseDatabase.getInstance().getReference().child("users").child(uid).setValue(userModel).addOnSuccessListener(aVoid -> finish());
 
+
+                        });
             }
-            
 
         });
 
 
-    }
 
+    }
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
+        startActivity(new Intent(SignUpActivity.this,LoginActivity.class));
         finish();
     }
 

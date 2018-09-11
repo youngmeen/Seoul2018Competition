@@ -1,17 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:weightSum="5"
     tools:context=".Fragment.Instruction">
-
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewPager"
+    <Button
+        android:layout_alignParentRight="true"
+        android:id="@+id/exit"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="X"
+        android:textColor="#666666"
+        android:background="#fff"
+        android:onClick="finish"
+        style="?android:attr/borderlessButtonStyle"
+        />
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </android.support.v4.view.ViewPager>
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="4"
+        >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <ImageView
+
+                    android:id="@+id/closbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="0sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/qqqq1"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </android.support.v4.view.ViewPager>
+            </LinearLayout>
+    </LinearLayout>
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    >
 
     <steelkiwi.com.library.view.IndicatorView
         android:id="@+id/indicatorView"
@@ -19,22 +73,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:iv_bar_color="@android:color/black"
-        app:iv_idle_color="#999999"
-        app:iv_select_color="#666666"
+        app:iv_idle_color="#cfcfd0"
+        app:iv_select_color="@color/toolbarColor"
         app:iv_size="40dp"
         app:iv_text_color="@android:color/white"
         app:iv_text_size="12sp"
         app:iv_action="hung_down"
-        app:iv_item_amount="3"
+        app:iv_item_amount="4"
         />
-    <Button
-        android:id="@+id/exit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="finish"
-        android:onClick="finish"
-
-        />
+</LinearLayout>
 
 
-</RelativeLayout>
+
+
+</LinearLayout>

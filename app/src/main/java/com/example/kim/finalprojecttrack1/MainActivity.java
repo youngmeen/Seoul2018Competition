@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
     void show() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("긴급모드 입니다");
+        builder.setTitle("응급상황 모드입니다");
         builder.setMessage(" 누르시겠습니까?");
         builder.setPositiveButton("예",
                 (dialog, which) -> startActivity(new Intent(MainActivity.this, LoginActivity.class)));
